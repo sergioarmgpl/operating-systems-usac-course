@@ -1,6 +1,12 @@
 # USAC - Operating Systems Course 
 Cloud Native Workshops, guides and student contribution area
 
-## Contents
+## Table of Contents
+1. Syllabus
+2. Contents
+3. Tutorials
+4. Projects
+
 ### Students Tutorials & Contribution Area
-Contents
+Contribution Guide
+Howtos
