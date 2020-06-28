@@ -1,0 +1,192 @@
+tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+
+add this to $HOME/.profile
+export PATH=$PATH:/usr/local/go/bin
+source $HOME/.profile
+
+//hello.go
+//go build hello.go
+//./hello
+package main //always start with package
+
+import "fmt"
+
+func main() {
+	fmt.Printf("hello, world\n")
+}
+
+godoc fmt Println
+
+Integer types
+uint8, uint16, uint32, uint64, int8, int16, int32 and int64
+
+Float types
+float32,float64
+
+//Example
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("1 + 1 =", 1 + 1)
+}
+
+
+//mathematic operators
++	addition
+-	subtraction
+*	multiplication
+/	division
+%	remainder
+
+String
+len("Hello World")
+"Hello World"[1]
+"Hello " + "World"
+
+Booleans
+true|false
+&&	and
+||	or
+!	not
+==      equal
+
+
+//Var declaration
+var x string
+var x string = "Hello World"
+var x = "Hello World"
+x := 5
+: no type specified
+
+//Function
+func f() {
+}
+
+//Constants
+const x string = "Hello World"
+
+//declaring multiple vars
+var (
+  a = 5
+  b = 10
+  c = 15
+)
+
+//Read variable
+var input float64
+fmt.Scanf("%f", &input)
+
+//Multiple lines
+  fmt.Println(`1
+2
+3`)
+
+//For
+//Example1
+i := 1
+for i <= 10 {
+  fmt.Println(i)
+  i = i + 1
+}
+//Example2
+for i := 1; i <= 10; i++ {
+  fmt.Println(i)
+}
+
+//If
+if i == 0 {
+  fmt.Println("Zero")
+} else if i == 1 {
+  fmt.Println("One")
+} else {
+  fmt.Println("Other")
+}
+
+//Switch
+switch i {
+case 0: fmt.Println("Zero")
+case 1: fmt.Println("One")
+default: fmt.Println("Unknown Number")
+}
+
+//Array
+var x [5]int
+x[4] = 100
+//[0 0 0 0 100]
+fmt.Println(x[4])
+//Other form of declaration
+x := [5]float64{ 98, 93, 77, 82, 83 }
+
+arr := [5]float64{1,2,3,4,5}
+x := arr[0:5]//Returning values
+
+//Slices, dynamic arrays
+var x []float64
+x := make([]float64, 5)//5 spaces to fill
+
+//Append
+slice1 := []int{1,2,3}
+slice2 := append(slice1, 4, 5)
+
+//Copy slices
+slice1 := []int{1,2,3}
+slice2 := make([]int, 2)
+copy(slice2, slice1)
+
+//Maps
+x := make(map[string]int)
+x["key"] = 10
+fmt.Println(x["key"])
+//Delete items from Map
+delete(x, 1)
+//Maps with strings
+elements := make(map[string]string)
+elements["H"] = "Hydrogen"
+//Asign simultanious
+name, ok := elements["Un"]
+fmt.Println(name, ok)
+//name, the value, ok if "Un" exists
+if name, ok := elements["Un"]; ok {
+  fmt.Println(name, ok)
+}
+//Example
+if el, ok := elements["Li"]; ok {
+  fmt.Println(el["name"], el["state"])
+}
+
+
+//Conversion
+float64(len(x))
+
+
+//READ ABOUT PANIC
+func add(a int,b int) int {
+   return a+b
+}
+
+func proc1() {
+  fmt.Println("I m here")
+}
+
+//Structures
+type Circle struct {
+  x, y, r float64
+}
+
+var c Circle
+
+c := new(Circle)
+c := Circle{x: 0, y: 0, r: 5}
+c := Circle{0, 0, 5}
+fmt.Println(c.x, c.y, c.r)
+c.x = 10
+c.y = 5
+
+func (c *Circle) area() float64 {
+  return math.Pi * c.r*c.r
+}
+fmt.Println(c.area())
+
+
