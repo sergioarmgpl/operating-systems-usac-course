@@ -81,7 +81,6 @@ Assigments
 - Websockets using Go
 - Containerizing Golang programs
 
-
 UNIT 3
 - Concurrency problems
 - Load balancing algoritms
