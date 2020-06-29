@@ -16,11 +16,11 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 - Create a place for R&D promoved by students and universities
 
 # Table of Contents
-1. [ Syllabus ](content/syllabus.md) 
+1. [ Syllabus ](lang/en/content/syllabus.md) 
 2. Contents
 3. Workshops
 4. Sample Codes
-5. [ Projects ](projects/projects.md)
+5. [ Projects ](lang/en/projects/projects.md)
 6. Events
 
 # Contributions area
