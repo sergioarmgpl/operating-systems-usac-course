@@ -2,7 +2,7 @@
 Cloud Native Workshops, guides and student contribution area
 
 ## Table of Contents
-1. Syllabus
+1. [ Syllabus ](content/syllabus.md) 
 2. Contents
 3. Tutorials
 4. Projects

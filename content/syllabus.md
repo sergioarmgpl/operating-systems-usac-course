@@ -34,7 +34,7 @@ Unit 1
 - History: Minix and others operating systems
 - PC startup sequence, kernel, service levels and bootloaders
 - Kernel Types: Monolytic, Microkernel, hybrid, modular,
-  Unikernel, Exokernel
+- Unikernel, Exokernel
 - Extended Machine study point
 - Virtualization history
 - Virtualization Types
@@ -48,14 +48,6 @@ Unit 1
 - Cloud Native
 - Cloud Computing and Providers
 - Serverless 
-
-Assigments
-- Forum about Rush Code The Movie
-- Linux installation and kernel tunning
-- Create a first Cloud Server Using Google Cloud
-- KVM Installation
-- Docker hello world app
-- Create a distroless container
 
 Unit 2
 - Process concept
@@ -74,13 +66,6 @@ Unit 2
 - Producer-consumer
 - Parallel programming languages
 
-Assigments
-- Producer-consumer using python and golang
-- Corutines using Go
-- Workpool programming using Python
-- Websockets using Go
-- Containerizing Golang programs
-
 UNIT 3
 - Concurrency problems
 - Load balancing algoritms
@@ -97,11 +82,34 @@ UNIT 3
 - Websockets
 - Social Network Architectures
 
+## Assigments Ideas
+
+Unit 1: Assigments
+- Forum about Rush Code The Movie
+- Linux installation and kernel tunning
+- Create a first Cloud Server Using Google Cloud
+- KVM Installation
+- Docker hello world app
+- Create a distroless container
+
+Unit 2: Assigments
+- Producer-consumer using python and golang
+- Corutines using Go
+- Workpool programming using Python
+- Websockets using Go
+- Containerizing Golang programs
+
+Unit 3: Assigments
+<Comming>
+
+## Resouces
+<Coming>
+
 ## Final Project
 <Coming>
 
 ## HOW TO ACCESS
-- https://uedi.ingenieria.usac.edu.gt/campus
+- https://uedi.ingenieria.usac.edu.gt/campus/course/info.php?id=4661
 - https://dtt-ecys.org/
 
 ## TEXTBOOKS
