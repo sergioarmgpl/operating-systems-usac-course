@@ -11,6 +11,8 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 - Add Tutorials, Workshops or sample codes for students
 
 # Goals
+- Provide a generic syllabus to fork for universities
+- Provide workshops, contents, samples codes, etc to study cloud native tecnologies
 - Promote the participation of students in the CNCF World
 - Promote students around the world to particate in a Google Summer of Code
 - Create a place for R&D promoved by students and universities
@@ -21,7 +23,8 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 3. Workshops
 4. Sample Codes
 5. [ Projects ](lang/en/projects/projects.md)
-6. Events
+6. Resources
+7. Events
 
 # Contributions area
 - Contribution Guide
