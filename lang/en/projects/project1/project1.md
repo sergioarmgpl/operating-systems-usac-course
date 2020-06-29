@@ -3,24 +3,23 @@
 ## Source
 Origin: Guatemala  
 Professor: Sergio Méndez  
-Authors: Sergio Méndez & asdadaasdads  
+Authors: Sergio Méndez & Bryan Ordoñez
 
-## Description
-PROYECTO 2  
-MANEJO DE CONCURRENCIA
+## DESCRIPTION
+Build a generic distributed system architecture that shows statistics in realtime. This project will be applied to the current infected cases of COVID-19 around the world.
  
-## OBJETIVOS
-Poner en práctica los conocimientos adquiridos en el curso y laboratorio de sistemas operativos 1.
-Entender el concepto de concurrencia al implementar un sistema en el que este concepto es primordial.
-Resolver problemas mediante el uso de tecnología contemporánea.
- 
- 
-## DESCRIPCIÓN 
-El proyecto consiste en crear un sitio web que muestre los datos enviados en tiempo real con ayuda de dos balanceador de carga, Docker Compose, kubernetes y las bases de datos de Mongodb y Redis.
-  
-La aplicación utilizara el concepto de colas para el manejo de la concurrencia. Se debera de transmitir la información mediante diferentes nodos, cada uno con implementado con tecnología diferente.
+## OBJECTIVES
+- Understand concurrency and parallelism theory to develop distributed systems.
+- Experiment and test with cloud native tecnologies that helps to develop modern distributed systems.
+- Design distributed systems strategies to improve high concurrency response.
+- Monitor distributed processing using technologies asociated to observability and telemetry.
+- Implement containers and orchestrators in distributed systemas.
+- Measure relialability and performance in high availability.
 
-### Primera Parte (Envió de datos)
+## ARCHITECTURE
+<IMAGE>
+
+### FIRST PART (Traffic simulator)
 La primera parte consta en realizar un programa en Go el cual debe enviar los datos de un archivo de entrada a los balanceadores de carga, los balanceadores de carga serán implementados en: 
 - Contour
 - Nginx
