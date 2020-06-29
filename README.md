@@ -10,6 +10,11 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 - Small Projects to contribute with your CNCF Project
 - Add Tutorials, Workshops or sample codes for students
 
+# Goals
+- Promote the participation of students in the CNCF World
+- Promote students around the world to particate in a Google Summer of Code
+- Create a place for R&D promoved by students and universities
+
 # Table of Contents
 1. [ Syllabus ](content/syllabus.md) 
 2. Contents
