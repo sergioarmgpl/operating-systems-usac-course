@@ -48,7 +48,22 @@ This is the functionaly:
  ```
 **Note:** This have to be located at a VM on the cloud
 
-## SECOND PART (Load Balancers)
+## SECOND PART (Docker, Kubernetes and Load Balancers)
+This part contains Git and Docker use, the Kubernetes cluster installation and Load Balancers configuration.
+
+### GIT, DOCKER AND KUBERNETES
+**Git:** Git will be the way to store and versioning code on github. Git/Github will be used as a tools to create a collaborative student development enviroment.
+
+**Docker:** Docker will be used to package the applications inside containers, will be preferable to use the distroless technique to create the smallest images size if its posible. Docker will be the tool to create a local enviroment for testing before a Docker image will be deployed to Kubernetes.
+  
+**Kubernetes:** Before the client machine that generates the traffic the project implements a Kubernetes Cluster which will be used to deploy different objects:
+- **Ingress controllers:** To expose different part of applications outside the cluster
+- **Deployments and services:** To deploy and communicate different sections of the application
+- **Pods:** If necesary. Is common to use a higher abstraction like Deployments instead.
+  
+Kubernetes will be in charge of the container orchestration of the different parts of the application. Using this kind of technologies the project is designed to create a basic cloud native enviroment and application. A basic 12 factor application.
+
+### LOAD BALANCERS
 This part is related to the Layer 7 Load Balancers(Kubernetes Ingress) configuration in the Kubernetes cluster using helm or kubectl. In this project we will two choose two of the following options:
 - nginx-ingress
 - Contour
@@ -82,14 +97,14 @@ The project consist in compare the performace and advantages of the two paths im
   
 **Note:** Will be desired to implement vertical and horizontal autoscaling, coroutines and threads according to the nature of the service to implement. This implemention is open but have to be justified in context of best practices.
 
-### THIRD PART (RPC, BROKERS AND NOSQL DATABASES)
+## THIRD PART (RPC, BROKERS AND NOSQL DATABASES)
 The main idea in this part is to create a high performance way to write data to NoSQL databases, using RPC communication versus Brokers. The goal is to compare the performace of the paths. The implementation consist in the first path will use NATS to receive data to be written to NOSQL Databases, and the other uses a high performance RPC, gRPC. Please refer to the architecture diagram.
   
-**NATs**: Is a simple, secure and high performance open source messaging system for cloud native applications, IoT messaging, and microservices architectures.
+**NATS**: A way to create queue system, messaging for cloud native application and microservices architectures.
   
-**gRPC:** Is a modern open source high performance RPC framework that can run in any environment. It can efficiently connect services in and across data centers with pluggable support for load balancing, tracing, health checking and authentication. It is also applicable in last mile of distributed computing to connect devices, mobile applications and browsers to backend services.
+**gRPC:** Is a high performance RPC framework that can run in any environment. Used primary to connect backend services.
   
-### FOURTH PART (NOSQL DATABASE)
+## FOURTH PART (NOSQL DATABASE)
 This project was based on a copy of structure of the Instagram Architecture, because of the nature of the system and the no scheme data, will be better to use NoSQL Databases. MongoDB could be used to store persistent data and Redis to implement counters and some caches to display data or analytics in realtime. Is decision of the student how to implement it.
   
 **MongoDB:** Is a NoSQL Document database that stores the information using JSON data format.
@@ -98,7 +113,7 @@ This project was based on a copy of structure of the Instagram Architecture, bec
   
 This databases will be installed in a instance that have to be accesible in the VPC of the Kubernetes Cluster.
 
-### FIFTH PART (WEBSITE OR MAIN PAGE)
+## FIFTH PART (WEBSITE OR MAIN PAGE)
 In the last part you have to create a website to show in realtime the inserted data, using a main page(See architecture diagram) developed with NodeJS, React or other progressive Javascript framework. You could use websockets in NodeJS or other language to show date in realtime. This main page have to show the next data:
   
 **Data sections:**
@@ -140,3 +155,6 @@ The student have to decide the places to implement observability using Linkerd, 
 ## CONTRIBUTE
 You can contribute in several ways:
 - Edit and improve this content
+- Share really awesome ideas
+- Provide real data to test in this infrastructure
+- Everything is welcome
