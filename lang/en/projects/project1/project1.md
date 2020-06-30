@@ -8,7 +8,7 @@
 **Authors:** Sergio Méndez & Bryan Ordoñez
 
 ## DESCRIPTION
-Build a generic distributed system architecture that shows statistics in realtime. This project will be applied to the current infected cases of COVID-19 around the world.
+Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and Cloud Native technologies. This project will be applied to the current infected cases of COVID-19 around the world.
  
 ## OBJECTIVES
 - Understand concurrency and parallelism theory to develop distributed systems.
