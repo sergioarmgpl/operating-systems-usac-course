@@ -1,18 +1,18 @@
 # USAC - Operating Systems Course 
-This repository contains the content of a generic operating system course to send PR or make forks, with the idea to gather knowledge from different countries. It also pretents to create a guide to understand, learn and contribute the use of cloud native technologies focusing specialy in the CNCF projects. You can also find in this repository Cloud Native Workshops, guides and a contribution area for students to promote CNCF tecnologies in general.
+This repository contains the content of a generic operating system course to send PR or make forks, with the idea to gather knowledge from different countries. It is also intended to be a guide to understand, learn and contribute towards the use of cloud native technologies, focusing specifically on the CNCF projects. Finally, you will find in this repository Cloud Native Workshops, guides and a contribution area for students to promote CNCF tecnologies in general.
 
 # CNCF Communities invitation
 There are different ways that the CNCF Communities and CNCF Projects can contribute. Make PRs or Issues related to:
-- Ideas related to create knowledge about Cloud Native
+- Ideas related to creating knowledge about Cloud Native
 - New Contents and Theory for our Syllabus
 - Translate to other languages
-- Project Ideas that you that we experiment with
+- Project Ideas to experiment with
 - Small Projects to contribute with your CNCF Project
 - Add Tutorials, Workshops or sample codes for students
 
 # Goals
 - Provide a generic syllabus to fork for universities
-- Provide workshops, contents, samples codes, etc to study cloud native tecnologies
+- Provide workshops, contents, samples codes, etc to study cloud native technologies
 - Promote the participation of students in the CNCF World
 - Promote students around the world to particate in a Google Summer of Code
 - Create a place for R&D promoved by students and universities
