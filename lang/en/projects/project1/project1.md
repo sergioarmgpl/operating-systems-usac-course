@@ -1,6 +1,6 @@
 # Project1
 
-*Project Name:* COVID Realtime Visualizer
+*Project Name:* COVID-19 Realtime Visualizer
 
 ## Source
 Origin: Guatemala  
