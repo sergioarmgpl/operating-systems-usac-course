@@ -1,21 +1,21 @@
 # Syllabus - Operating Systems 1 - Course - USAC
 
 ## COURSE INFORMATION
-Operating Systems 1 course try to envolve students in a practical and easy way to understand the operating systems, focusing in the operating systems point of study of extended machine and process management. In this way we cover different classic theory to build operating systems or develop distribute systems that match the emerging requiriments of the tech industry. In the same way the student is exposed to new open source technologies like container, orchestrator and a DevOps midset.
+Operating Systems 1 course helps students to understand operating systems in a practical and easy way, focusing in the operating systems point of study of extended machine and process management. In this way we cover different classic theory to build operating systems or develop distribute systems that match the emerging requiriments of the tech industry. In the same way the student is exposed to new open source technologies like the container, orchestrator and a DevOps mindset.
 
 ## PROFESSOR
 <Coming>
 
 ## GENERAL OBJECTIVE
-Understand the structure of the operating system using the point of study view of Extend Machine and Management process to apply that knowdledge to tune up build operating systems and create solutions that take advange of concurrency and parallel processing.
+Understand the structure of the operating system using the point of study view of Extend Machine and Management process to apply that knowledge, to tune up build operating systems, and create solutions that take advange of concurrency and parallel processing.
 
 
 ## SPECIFIC OBJECTIVES
 - Understand and apply virtualization and cloud computing to build solutions.
-- Apply learned processes theory for monitoring servers and do and intelligent process management
-- Develop systems using concurrency and parallelism to solve real high concurrency problems, like un social networks.
-- Evaluate different open source technologies to build high availability systems that supports high concurrency levels.
-- Develop systems implementing containers, orchestrators and some level of observality to experiment with the new requirements of tech industry.
+- Apply learned processes theory for monitoring servers and do intelligent process management
+- Develop systems using concurrency and parallelism to solve real high concurrency problems, like a social network.
+- Evaluate different open source technologies to build high availability systems that support high concurrency levels.
+- Develop systems implementing containers, orchestrators and some level of observability to simulate the new requirements of tech industry.
 
 ## GRADING
 - Exam 1: Extend Machine, 20pts
