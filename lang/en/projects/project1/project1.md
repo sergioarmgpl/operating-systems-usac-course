@@ -1,5 +1,7 @@
 # Project1
 
+*Project Name:* COVID Realtime Visualizer
+
 ## Source
 Origin: Guatemala  
 Professor: Sergio Méndez  
@@ -17,85 +19,120 @@ Build a generic distributed system architecture that shows statistics in realtim
 - Measure relialability and performance in high availability.
 
 ## ARCHITECTURE
-<IMAGE>
+![Architecture Diagram](project1.png)
 
-### FIRST PART (Traffic simulator)
-La primera parte consta en realizar un programa en Go el cual debe enviar los datos de un archivo de entrada a los balanceadores de carga, los balanceadores de carga serán implementados en: 
+
+## FIRST PART (Golang Traffic generator)
+This part consist in create a traffic generator written in Golang, this traffic will be received by public load balancers(k8s ingresses) in this case:
+- Contour(contour.domain.tld)
+- Nginx(nginx.domain.tld)
+  
+This is the functionaly:
+- a file named as traffic-gen will receive 3 parameters:
+ - *url:* This is the url to send traffic
+ - *file:* File that contains the parameters to send randomly in every request
+ - *clients:* Name of simultanious request to send
+ - *requests:* Total of request to send
+
+ File Example:
+ ```
+[
+    {
+        "name":"Pablo Mendoza"
+        "location":"Guatemala City"
+        "age":35
+        "infectedtype":"communitary"
+        "state": "asymptomatic"
+    }
+]
+ ```
+*Note:* This have to be located at a VM on the cloud
+
+## SECOND PART (Load Balancers)
+This part is related to the Layer 7 Load Balancers(Kubernetes Ingress) configuration in the Kubernetes cluster using helm or kubectl. In this project we will two choose two of the following options:
+- nginx-ingress
 - Contour
-- Nginx
-El archivo con los datos tendrá el siguiente formato:
+- Gloo
+- Traefik
   
-El tendrá N cantidad de datos (para la calificación será proporcionado por el auxiliar).
+This part is the way to expose the application to the outside world.
   
-Cuando se ejecute el programa de Go se deberá de preguntar lo siguiente:
+### INGRESS 1 AND 2
+The goal is to compare the time response for different ingress controllers, mainly the comparation between nginx, envoy and traefik. All the ingress points to a different applications or paths.
   
-- Url del balanceador de carga que se desea enviar
-- Cantidad de hilos que se desean para enviar
-- Cantidad de solicitudes que tiene el archivo (la cantidad de casos que se desean enviar)
-- Ruta del archivo que se desea cargar
+The project consist in compare the performace and advantages of the two paths implemented in the project.
+  
+*First path:*  
+Traffic Generator  
+Ingress #1  
+App1-srv  
+App1-deployment-Golang  
+NATs  
+Write to MongoDB  
+Write to Redis  
 
-### Segunda Parte (Balanceadores de carga)
-Nota: De esta parte en adelante será en la nube.
+*Second path:*  
+Traffic Generator  
+Ingress #2  
+App2-srv  
+App1-deployment-Golang-gRPC  
+gRPC-Server  
+Write to MongoDB  
+Write to Redis  
   
-La segunda parte empieza por instalar kubernetes la cual será la base de las aplicaciones.
-  
-### Balanceadores de carga (Nginx y Contour):
-Será el mismo trabajo con dos balanceadores de carga distintos, se deben de instalar los balanceador de carga de forma local, los balanceadores de carga apuntará a dos contenedores que tendrán cada uno un servidor web corriendo sobre go, entonces los balanceadores de carga recibirán los datos de la aplicación local y los distribuirá entre los dos contenedores.
-  
-Nota: Los contenedores de go deberán de tener escalabilidad vertical/horizontal para cuando los hilos aumenten pueda soportar la carga, queda a discreción del alumno como implementarla.
-### Tercera Parte (Mensajería entre aplicaciones)
-La tercera parte se necesita obtener la información que se envió y mandarla por medio de por medio de dos herramientas:
-  
-NATS.io: Es un sistema de mensajería de código abierto simple, seguro y de alto rendimiento para aplicaciones nativas de la nube, mensajería IoT y arquitecturas de microservicios.
-  
-gRPC: Es un framework moderno de llamada a procedimiento remoto (RPC) de código abierto que puede ejecutarse en cualquier lugar. Permite que las aplicaciones cliente y servidor se comuniquen de manera transparente y facilita la creación de sistemas conectados.
-  
-La información será enviada a dos contenedores que correrán una aplicación en Python, estas aplicaciones se encargarán de almacenar los datos finalmente en las dos bases de datos que se estarán manejando.
-  
-Cuarta parte (Bases de datos)
-  
-Se necesita que se implementen bases de datos no relaciones para mejorar la velocidad y rendimiento de la aplicación, las bases de datos a manejar serán:
-  
-MongoDB: Es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
-  
-Redis: Es un almacén de datos en memoria de código abierto (con licencia BSD), utilizado como base de datos, caché y agente de mensajes. Admite estructuras de datos como cadenas, hashes, listas, conjuntos, conjuntos ordenados con consultas de rango, mapas de bits, hiperloglogs, índices geoespaciales con consultas y flujos de radio.
-  
-Estas bases de datos deberán de ser instaladas en máquinas virtuales en la nube.
+*Note:* Will be desired to implement vertical and horizontal autoscaling, coroutines and threads according to the nature of the service to implement. This implemention is open but have to be justified in context of best practices.
 
-### Quinta parte (Pagina Web)
-Por último, se debe de crear una página web corriendo sobre un servidor de node js, dentro de la página la cual tendrá una temática de coronavirus debe de tener lo siguiente:
+### THIRD PART (RPC, BROKERS AND NOSQL DATABASES)
+The main idea in this part is to create a high performance way to write data to NoSQL databases, using RPC communication versus Brokers. The goal is to compare the performace of the paths. The implementation consist in the first path will use NATS to receive data to be written to NOSQL Databases, and the other uses a high performance RPC, gRPC. Please refer to the architecture diagram.
   
-Apartados:
-- Deberá mostrar una tabla con todos los datos (MongoDB).
-- Deberá mostrar el top tres de departamentos con más casos(MongoDB).
-- Gráfica de Pie con todos los departamentos afectados (MongoDB).
-- El último caso agregado (el último del archivo) (Redis).
-- Una gráfica de barras que muestra la cantidad de afectados por rango de edades, ej. 0-10 años  5 casos (Redis).
-
-## Arquitectura Final
-
-### MONITOREO
-
-Jaeger
-Se debe de implementar jaeger tracing en todos los contenedores para poder monitorear todas las acciones que suceden en estos.
+*NATs*: Is a simple, secure and high performance open source messaging system for cloud native applications, IoT messaging, and microservices architectures.
   
-Linkerd
-También se le solicita implementar Linkerd, esta es una herramienta que trabajara en conjunto con kubernetes para el monitoreo de los contenedores.
+*gRPC:* Is a modern open source high performance RPC framework that can run in any environment. It can efficiently connect services in and across data centers with pluggable support for load balancing, tracing, health checking and authentication. It is also applicable in last mile of distributed computing to connect devices, mobile applications and browsers to backend services.
   
-Prometheus
-Se deberá instalar el softeware de prometheus para el monitoreo de las maquinas virtuales que contienen las bases de datos. Se sugiere una instalación local bajando los binarios.
+### FOURTH PART (NOSQL DATABASE)
+This project was based on a copy of structure of the Instagram Architecture, because of the nature of the system and the no scheme data, will be better to use NoSQL Databases. MongoDB could be used to store persistent data and Redis to implement counters and some caches to display data or analytics in realtime. Is decision of the student how to implement it.
+  
+*MongoDB:* Is a NoSQL Document database that stores the information using JSON data format.
+  
+*Redis:* Is a NoSQL Key-Value database that implements different data types like list, sets, sorted sets, etc.
+  
+This databases will be installed in a instance that have to be accesible in the VPC of the Kubernetes Cluster.
 
-## RESTRICCIONES
-- El proyecto se realizará en modalidad de trios.
-- Debe implementarse en lenguaje de establecido en cada sección.
-- Debe realizarse manual técnico y de usuario.
-- Copias totales o parciales, tendrán una nota de 0 puntos y será reportado a escuela de sistemas.
-- Entregas Tarde no se aceptarán.
+### FIFTH PART (WEBSITE OR MAIN PAGE)
+In the last part you have to create a website to show in realtime the inserted data, using a main page(See architecture diagram) developed with NodeJS, React or other progressive Javascript framework. You could use websockets in NodeJS or other language to show date in realtime. This main page have to show the next data:
+  
+*Data sections:*
+- Collections data stored in MongoDB.
+- Top 3 of infected areas in MongoDB.
+- Pie Chart of infected percentage of states, departments, etc., in MongoDB
+- Last 5 infected cases stored in Redis.
+- Bar Chart of infectad age range in Redis.
+
+### OBSERVABILITY AND MONITORING
+The student have to decide the places to implement observability using Linkerd, Jaeger and Prometheus, using different tecniques .
+  
+*Jaeger:* The project have to implement tracing with Jaeger in the most important places according to the nature of the system.
+
+*Linkerd:* The project have to implement observability in the network and responses associated to the different pods or deployments implemented in the project. In this the project implements a realtime monitoring for golden metrics.
+  
+*Prometheus:* The project have to implement monitoring for the state of the services using Prometheus, for example you can use Prometheus to monitor NoSQL Databases and visualize the information using Grafana.
+
+## RESTRICTIONS
+- The project have to by developed in trios
+- Have to be implemented with the ingresses and languages selected
+- Write an tecnical and user manual
+- If copies found, the trio will receive a score of 0 points and will be reported.
+- Late projects will be not accepted
  
-## ENTREGABLES
-- Código de los servidores .
-- Manual del proceso en formato PDF.
-  
-En el caso de no cumplir con alguna de las indicaciones antes mencionadas, NO se calificará el proyecto; por lo cual, se tendrá una nota de cero puntos.
-  
-La entrega se debe realizar antes del Lunes 29 de Junio de 2020
+## ARTIFACTS TO DELIVER
+- Source Code
+- Manuals in PDF format
+
+## Deadline
+<Include date of Deadline here>
+
+## REFERENCES
+- https://nats.io/
+- https://grpc.io/
+- https://www.mongodb.com/
+- https://redis.io/
