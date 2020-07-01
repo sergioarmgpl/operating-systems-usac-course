@@ -30,5 +30,7 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 # Contributions area
 - Contribution Guide
 - [ contributors ](contributors.md)
+
+# CONTACT
 To get in touch email us at:
-- 2641183830101@ingenieria.usac.edu.gt, Professor Sergio Méndez
+- 2641183830101@ingenieria.usac.edu.gt USAC Professor - Sergio Méndez
