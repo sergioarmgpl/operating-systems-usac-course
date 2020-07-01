@@ -1,5 +1,5 @@
-# USAC - Operating Systems Course 
-This repository contains the content of a generic operating system course to send PR or make forks, with the idea to gather knowledge from different countries. It is also intended to be a guide to understand, learn and contribute towards the use of cloud native technologies, focusing specifically on the CNCF projects. Finally, you will find in this repository Cloud Native Workshops, guides and a contribution area for students to promote CNCF tecnologies in general.
+# Open Operating Systems Course 
+This repository contains the content of a generic operating system course to send PR or make forks, with the idea to gather knowledge from different countries and mindsets. It is also intended to be a guide to understand, learn and contribute towards the use of cloud native technologies, focusing specifically on the CNCF projects. Finally, you will find in this repository Cloud Native Workshops, guides and a contribution area for students to promote CNCF tecnologies in general. This content is based on the syllabus of the current course from USAC University of Guatemala.
 
 # CNCF Communities invitation
 There are different ways that the CNCF Communities and CNCF Projects can contribute. Make PRs or Issues related to:
@@ -16,6 +16,7 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 - Promote the participation of students in the CNCF World
 - Promote students around the world to particate in a Google Summer of Code
 - Create a place for R&D promoved by students and universities
+- Promote diversity and inclusion
 
 # Table of Contents
 1. [ Syllabus ](lang/en/content/syllabus.md) 
@@ -29,3 +30,5 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 # Contributions area
 - Contribution Guide
 - [ contributors ](contributors.md)
+To get in touch email us at:
+- 2641183830101@ingenieria.usac.edu.gt, Professor Sergio Méndez
