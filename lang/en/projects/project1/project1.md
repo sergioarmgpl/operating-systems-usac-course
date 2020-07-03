@@ -5,7 +5,7 @@
 ## Source
 **Location:** Guatemala  
 **Professor:** Sergio Méndez  
-**Authors:** Sergio Méndez & Bryan Ordoñez
+**Authors:** Sergio Méndez & Bryan Ordoñez & David Alvarado
 
 ## DESCRIPTION
 Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and Cloud Native technologies. This project will be applied to the current infected cases of COVID-19 around the world.
