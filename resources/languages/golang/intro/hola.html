@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<form onsubmit="return false;">
+    Ingresa edad:<input type="text" id="edad">
+    <br>
+    <button onclick="devolverEdad()">Calcular clasificaci&oacute;n</button>
+</form>
+<div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+    function devolverEdad(){
+        var edad=document.getElementById("edad").value
+        $.get( "http://localhost/clasiedad/"+edad, function( data ) {
+           alert(data)
+           $( "#resultado" ).html( data );
+        });
+    }
+</script>
