@@ -1,20 +1,21 @@
 package main
 
 import (
-  "fmt"
-  "time"
+	"fmt"
+	"time"
 )
 
 func f(n int) {
-  for i := 0; i < 10; i++ {
-    fmt.Println(n, ":", i)
-    time.Sleep(time.Millisecond * 1000)
-  }
+	for i := 0; i < 10; i++ {
+		fmt.Println(n, ":", i)
+		time.Sleep(time.Millisecond * 1000)
+	}
 }
 
 func main() {
-  go f(0)
-  var input string
-  fmt.Scanln(&input)
-  fmt.Println(input)
+	var input string
+	go f(0)
+	fmt.Println("Input a number:")
+	fmt.Scanln(&input)
+	fmt.Println(input)
 }
