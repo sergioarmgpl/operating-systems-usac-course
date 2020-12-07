@@ -7,11 +7,11 @@ def hello_world():
     return 'Hello, World!'
 
 @app.route('/_healthz')
-def hello_world():
+def health():
     return 'OK'
 
 @app.route('/_test')
-def hello_world():
+def health2():
     return 'OK'
 
 if __name__ == '__main__':
