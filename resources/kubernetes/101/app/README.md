@@ -3,8 +3,10 @@ This folder contains the source code to build this image, that is used for this 
 ## Building the image
 To build the image run:   
 ```
-sudo /bin/bash build.sh
+docker login YOURUSER
+docker build --no-cache -t YOURUSER/python-flask-distroless .
 ```
+**Note:** /bin/bash build.sh could work in some environments.   
 The image is located in Docker Hub and you can access it in next form:   
 ```
 YOUR_USER/python-flask-distroless
