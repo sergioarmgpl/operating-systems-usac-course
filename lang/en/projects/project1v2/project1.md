@@ -97,6 +97,9 @@ The goal is to compare the time response and performance for the different paths
   
 **Note:** Will be desired to implement vertical and horizontal autoscaling, coroutines and threads according to the nature of the service to implement. This implemention is open but have to be justified in context of best practices.
 
+### TRAFFIC SPLITTING
+To implement Traffic Splitting the project will use Linkerd to implement this feature with the idea that the traffic splits 50% traffic to the first path and the other 50% to the second path.
+
 ## THIRD PART (RPC, BROKERS AND NOSQL DATABASES)
 The main idea in this part is to create a high performance way to write data to NoSQL databases, using RPC communication versus Brokers. The goal is to compare the performace of the paths. The implementation consist in the first path will use Redis to receive data to be written to NOSQL Databases, and the other uses a high performance RPC, gRPC. Please refer to the architecture diagram.
   
