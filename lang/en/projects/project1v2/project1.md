@@ -66,8 +66,11 @@ This part contains Git and Docker use, the Kubernetes cluster installation and L
   
 Kubernetes will be in charge of the container orchestration of the different parts of the application. Using this kind of technologies the project is designed to create a basic cloud native enviroment and application. A basic 12 factor application.
 
+### NAMESPACE
+Is a good practice to organice all the application in a separated namespace called project
+
 ### LOAD BALANCERS
-This part is related to the Layer 7 Load Balancers(Kubernetes Ingress) configuration in the Kubernetes cluster using helm or kubectl. In this project we will two choose two of the following options:
+This part is related to the Layer 7 Load Balancers(Kubernetes Ingress) configuration in the Kubernetes cluster using helm or kubectl. In this project we will choose one of the following options:
 - nginx-ingress(Fully tested at the moment)
 - Contour
 - Gloo
@@ -75,16 +78,14 @@ This part is related to the Layer 7 Load Balancers(Kubernetes Ingress) configura
   
 This part is the way to expose the application to the outside world.
   
-### INGRESS 1 AND 2
-The goal is to compare the time response for different ingress controllers, mainly the comparation between nginx, envoy and traefik. All the ingress points to a different applications or paths.
-  
-The project consist in compare the performace and advantages of the two paths implemented in the project.
+### INGRESS
+The goal is to compare the time response and performance for the different paths, one using Go and the other using Redis Pub/Sub. All the input information pass across an ingress controller of your choise nginx, envoy and traefik. 
   
 **First path:**  
 - Traffic Generator  
 - Ingress  
-- Golang gRPC Client  
-- Golang gRPC Service
+- Go gRPC Client  
+- Go gRPC Service
 - Write to NoSQL Database 
 
 **Second path:**  
@@ -122,6 +123,9 @@ In the last part you have to create a website to show in realtime the inserted d
 - Last 5 infected cases stored in Redis.
 - Bar Chart of infectad age range in Redis.
 
+### MANAGED SERVICES
+The goal of this part is that students experiment with Cloud Managed services like functions as a service, Databases, Virtual Machines, DNS and Container Managed services, this services could change between the selected Cloud provider for this project.
+
 ### OBSERVABILITY AND MONITORING
 The student have to decide the places to implement observability and golden metrics using Linkerd.
 
@@ -141,7 +145,10 @@ The student have to decide the places to implement observability and golden metr
 - Manuals in PDF format
 
 ## Deadline
-Later December
+Later December 2020
+
+## Resources
+- Diagram on this project, https://app.diagrams.net/#G1iX9hdyBTAoBd47ZMtfEg8iSXXtkPriTv
 
 ## REFERENCES
 - https://kubernetes.io/
