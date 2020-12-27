@@ -68,7 +68,7 @@ Kubernetes will be in charge of the container orchestration of the different par
 
 ### LOAD BALANCERS
 This part is related to the Layer 7 Load Balancers(Kubernetes Ingress) configuration in the Kubernetes cluster using helm or kubectl. In this project we will two choose two of the following options:
-- nginx-ingress
+- nginx-ingress(Fully tested at the moment)
 - Contour
 - Gloo
 - Traefik
@@ -82,18 +82,16 @@ The project consist in compare the performace and advantages of the two paths im
   
 **First path:**  
 - Traffic Generator  
-- Ingress #1  
-- app1-srv
-- app1-deployment-golang-grpc-client  
-- app1-deployment-golang-grpc-server
+- Ingress  
+- Golang gRPC Client  
+- Golang gRPC Service
 - Write to NoSQL Database 
 
 **Second path:**  
 - Traffic Generator  
-- Ingress #2  
-- app2-srv  
-- app2-deploy-golang-redis-pub  
-- app2-deploy-golang-redis-sub  
+- Ingress  
+- Redis Client Pub/Sub  
+- Redis Server Pub/Sub
 - Write to NoSQL Database  
   
 **Note:** Will be desired to implement vertical and horizontal autoscaling, coroutines and threads according to the nature of the service to implement. This implemention is open but have to be justified in context of best practices.
@@ -110,7 +108,7 @@ This project was based on a copy of structure of the Instagram Architecture, bec
   
 **MongoDB or other:** Is a NoSQL Document database that stores the information using JSON data format.
   
-**Redis:** Is a NoSQL Key-Value database that implements different data types like list, sets, sorted sets, etc.
+**Redis:** Is a NoSQL Key-Value database that implements different data types like list, sets, sorted sets, etc. Could be used to implement a pub/sub service to write into a NoSQL Database.
   
 This databases will be installed in a instance that have to be accesible in the VPC of the Kubernetes Cluster.
 
