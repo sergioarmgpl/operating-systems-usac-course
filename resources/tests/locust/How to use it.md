@@ -19,7 +19,7 @@ Locust is an open source testing tool, after installation we can use it as norma
   > locust -f path/traffic.py
   This will start running the test application on your console and gives you an IP address to acces the graphical interface.
   
-  ![alt text ](https://github.com/jossiebk/operating-systems-usac-course/tree/master/resources/tests/locust/imagenes/paso1.png)
+  ![Paso1](imagenes/paso1.png)
   
 2. Copy that IP address and paste it in your browser, you will se a green page asking for some information.
 - If you have trouble accessing the page try "localhost:port".
