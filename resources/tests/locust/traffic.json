@@ -1,0 +1,142 @@
+[
+   {
+       "name":"Jossie Castrillo",
+       "location":"Guatemala City",
+       "age":27,
+       "infected_type":"communitary",
+       "state": "active"
+   },
+   {
+       "name":"Ariel de Leon",
+       "location":"Jutiapa",
+       "age":27,
+       "infected_type":"imported",
+       "state": "deceased"
+   },
+   {
+       "name":"Sarai Hernandez",
+       "location":"Escuintla",
+       "age":26,
+       "infected_type":"communitary",
+       "state": "recovered"
+   },
+   {
+       "name":"Disa Velasquez",
+       "location":"Guatemala City",
+       "age":27,
+       "infected_type":"imported",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"Omar Perez",
+       "location":"Izabal",
+       "age":25,
+       "infected_type":"communitary",
+       "state": "recovered"
+   },
+   {
+       "name":"Carlos Orantes",
+       "location":"Izabal",
+       "age":26,
+       "infected_type":"imported",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"Athena Solis",
+       "location":"Escuintla",
+       "age":24,
+       "infected_type":"communitary",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"David Morales",
+       "location":"Jutiapa",
+       "age":26,
+       "infected_type":"imported",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"Luis Rivera",
+       "location":"Zacapa",
+       "age":25,
+       "infected_type":"communitary",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"Astrid Gonzalez",
+       "location":"Zacapa",
+       "age":28,
+       "infected_type":"imported",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"Pin Plata",
+       "location":"Izabal",
+       "age":45,
+       "infected_type":"communitary",
+       "state": "recovered"
+   },
+   {
+       "name":"Maria Jose",
+       "location":"Guatemala City",
+       "age":29,
+       "infected_type":"imported",
+       "state": "active"
+   },
+   {
+       "name":"El Peluca",
+       "location":"Guatemala City",
+       "age":40,
+       "infected_type":"communitary",
+       "state": "active"
+   },
+   {
+       "name":"Glen Calel",
+       "location":"Guatemala City",
+       "age":25,
+       "infected_type":"imported",
+       "state": "active"
+   },
+   {
+       "name":"Bismarck Castrillo",
+       "location":"Izabal",
+       "age":27,
+       "infected_type":"communitary",
+       "state": "asymptomatic"
+   },
+   {
+       "name":"Lucilla",
+       "location":"Guatemala City",
+       "age":24,
+       "infected_type":"imported",
+       "state": "deceased"
+   },
+   {
+       "name":"Pablo Mendoza",
+       "location":"Guatemala City",
+       "age":35,
+       "infected_type":"communitary",
+       "state": "deceased"
+   },
+   {
+       "name":"Din Djarin",
+       "location":"Escuintla",
+       "age":40,
+       "infected_type":"imported",
+       "state": "deceased"
+   },
+   {
+       "name":"Osvaldo Sierra",
+       "location":"Guatemala City",
+       "age":44,
+       "infected_type":"communitary",
+       "state": "recovered"
+   },
+   {
+       "name":"Carol Hernandez",
+       "location":"Escuintla",
+       "age":29,
+       "infected_type":"imported",
+       "state": "recovered"
+   }
+]
