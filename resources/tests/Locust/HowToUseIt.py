@@ -13,9 +13,9 @@ class QuickstartUser(HttpUser):
     def on_start(self):
         reg=""
         # We read the Json file.
-        with open("traffic.json") as file:
+        with open("HowToUseIt.json") as file:
             data=json.load(file)
-            # Generate a random value between 0 and the size of you Json file - 1
+            # Generate a random value between 0 and the size of your Json file - 1
             value=randint(0,19)
             # Get the value position of the Json load in data variable to send it in the request.
             reg=data[value]
