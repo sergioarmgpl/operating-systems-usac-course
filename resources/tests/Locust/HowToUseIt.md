@@ -33,7 +33,7 @@ Locust is an open source testing tool, after installation we can use it as norma
 - Spawn rate:  the amount of users per second that you want to simulate.
 - Host: the IP/Domain of the server you are testing.
 
-![step3](Images/step5.png)
+![step3](Images/step5.PNG)
 
 
 4. You will access a page that shows you some statitstics about the testing where you can see in a general way, some charts to make it more dynamic, failures, exceptions  and a tab where you can down load the data. In the right corner you can stop or reset the stats.
