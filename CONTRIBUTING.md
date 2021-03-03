@@ -19,13 +19,13 @@ En el repositorio que se desea contribuir existe un botón llamado fork en la pa
 
 En este caso es https://github.com/sergioarmgpl/operating-systems-usac-course.git
 
-![Forking](images/fork.png)
+![Forking](/images/fork.png)
 
 ### 2. Clona el repositorio de tu perfil de github, es decir tu fork.
 Debes clonar el repositorio al que hiciste fork, el cual se encuentra en tu perfil de github en el área de repositorios.
 
-![Clone](./images/clone.png)
-![Clone console](./images/clone-console.png)
+![Clone](/images/clone.png)
+![Clone console](/images/clone-console.png)
 
 Puedes clonarlo en tu computadora ejecutando el siguiente comando en la carpeta que desees almacenar el proyecto, cabe recalcar que en donde dice youruser debes de colocar tu usuario de github
 
@@ -46,14 +46,14 @@ En caso de ser un arreglo de bug se recomienda nombrar a la rama con el prefijo 
 
 *```fix-contribuitingLanguage ```*
 
-![Branch](./images/branch-console.png)
+![Branch](/images/branch-console.png)
 
 ### 4. Inicializa el proyecto en tu editor de código favorito y haz el cambio en los archivos en los que deseas contribuir.
 En esta ocasión utilizaremos Visual Studio Code, pero puede ser cualquiera.
 
 También puedes crear nuevos archivos en las carpetas que desees.
 
-![Open](./images/open.png)
+![Open](/images/open.png)
 
 
 ### 5. Añade a tu rama los cambios realizados.
@@ -67,7 +67,7 @@ También puedes añadir todos los archivos a los que les hayas hecho cambios med
 
 *``` git add .```*
 
-![Add](./images/add.png)
+![Add](/images/add.png)
 
 ### 6. Has commit de tus cambios.
 En este punto confirmaras que los cambios que haz realizado son correctos y están listos para ir a producción.
@@ -76,7 +76,7 @@ Esto se realiza mediante el comando:
 
 *```git commit -m "A description about commited changes"```*
 
-![Commit](./images/commit.png)
+![Commit](/images/commit.png)
 
 ### 7. Sube tus cambios al repositorio en la nube.
 
