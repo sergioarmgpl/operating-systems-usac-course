@@ -28,7 +28,7 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 7. Events
 
 # Contributions area
-- Contribution Guide
+- [Contribution Guide](CONTRIBUTING.md)
 - [ contributors ](contributors.md)
 
 # CONTACT
