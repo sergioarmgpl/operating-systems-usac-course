@@ -19,7 +19,7 @@ En el repositorio que se desea contribuir existe un botón llamado fork en la pa
 
 En este caso es https://github.com/sergioarmgpl/operating-systems-usac-course.git
 
-![Forking](/images/fork.png)
+![Forking](fork.png)
 
 ### 2. Clona el repositorio de tu perfil de github, es decir tu fork.
 Debes clonar el repositorio al que hiciste fork, el cual se encuentra en tu perfil de github en el área de repositorios.
