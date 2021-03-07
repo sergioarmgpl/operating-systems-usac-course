@@ -1,0 +1,20 @@
+// Protoc version definition 
+syntax = "proto3";
+
+//Package definition
+package chat;
+
+//  Definition of the message to send/receive
+message MessageRequest {
+	string name = 1;
+}
+
+message MessageReply {
+	string body = 1;
+}
+
+// The ChatService definition
+service ChatService {
+	// Receives a message and returns a message
+	rpc SendMessage(MessageRequest) returns (MessageReply) {}
+}
