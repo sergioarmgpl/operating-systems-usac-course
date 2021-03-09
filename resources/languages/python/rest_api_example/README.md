@@ -36,4 +36,25 @@ The development server runs by default on port 5000 and can be started using
 Details and clarification about implementation can be found on the documentation of the api.py file itself.
 
 A Postman Collection was shared along with this example, so you can easily test the endpoints.
+If you preffer to use cURL, endpoints can be reach using:
 
+GET
+> curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:5000/api/v1/books
+
+POST
+
+> curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"name": "New Book Created"}' \
+  http://localhost:5000/api/v1/books
+
+PUT
+> curl --header "Content-Type: application/json" \
+  --request PUT \
+  --data '{"name": "Edit Book Created"}' \
+  http://localhost:5000/api/v1/books/4
+
+DELETE
+>curl --header "Content-Type: application/json" \
+  --request DELETE \
+  http://localhost:5000/api/v1/books/4
