@@ -1,6 +1,6 @@
 # Project1
 
-**Project Name:** COVID-19 Realtime Visualizer
+**Project Name:** COVID-19 Realtime Vaccined People Visualizer
 
 ## Source
 **Location:** Guatemala  
@@ -155,7 +155,7 @@ The student have to decide the places to implement observability and golden metr
   
 **Prometheus:** The project have to implement monitoring for the state of the services using Prometheus, for example you can use Prometheus to monitor NoSQL Databases and visualize the information using Grafana.
 
-### Chaos Engineering 
+### CHAOS ENGINEERING
 In this part the student has to implement faulty traffic to the system and kill components of the cluster, at the same time shows the behavior of the chaos in the cluster.
 
 **Linkerd:** Use Linkerd for faulty traffic generation
