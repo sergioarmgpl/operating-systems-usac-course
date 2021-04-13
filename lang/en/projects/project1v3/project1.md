@@ -112,7 +112,7 @@ To implement Traffic Splitting the project will use Linkerd to implement this fe
 - Queue #1 50%, Queue #2 50%
 - Queue #1 33.33%, Queue #2 33.33%, Queue #3 33.33%
 - Queue #1 33.33%, Queue #2 33.33%, Faulty Traffic 33.33%
-- Queue #1 50%, Traffic 50%
+- Queue #1 50%, Faulty Traffic 50%
 
 
 ## THIRD PART (RPC, BROKERS AND NOSQL DATABASES)
@@ -163,6 +163,8 @@ In this part the student has to implement faulty traffic to the system and kill 
 **Chaos Mesh:** Use Chaos Mesh to implement, Slow Network, Pod Kill and Failure, and Kernel fails.
 
 The goal is to monitor the behavior of the system while the Chaos is in progress.
+
+**Note:** The war zone refers to a Chaos Engineering tests running.
 
 ## RESTRICTIONS
 - The project have to by developed in cuartets 
