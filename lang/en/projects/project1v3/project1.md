@@ -1,6 +1,6 @@
 # Project1
 
-**Project Name:** COVID-19 Realtime Vaccined People Visualizer
+**Project Name:** COVID-19 Realtime Vaccinated People Visualizer
 
 ## Source
 **Location:** Guatemala  
@@ -8,7 +8,7 @@
 **Authors:** Sergio Méndez
 
 ## DESCRIPTION
-Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and service mesh such as Linkerd and some other Cloud Native technologies. In the last part we use a service mesh for traffic splitting an faulty traffic generation with Linkerd and Chaos for complementary tests. This project will be applied visualize Covid-19 vaccined people around the world.
+Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and service mesh such as Linkerd and some other Cloud Native technologies. In the last part we use a service mesh for traffic splitting an faulty traffic generation with Linkerd and Chaos for complementary tests. This project will be applied visualize Covid-19 Vaccinated people around the world.
  
 ## OBJECTIVES
 - Understand concurrency and parallelism theory to develop distributed systems.
@@ -138,10 +138,10 @@ In the last part you have to create a website to show in realtime the inserted d
   
 **Data sections:**
 - Collections data stored in MongoDB.
-- Top 3 of vaccined countries in MongoDB.
-- Pie Chart of gender vaccioned in MongoDB by country.
-- Last 5 vaccined people stored in Redis by country.
-- Bar Chart of vaccined age range in Redis by country.
+- Top 3 of vaccinated  countries in MongoDB.
+- Pie Chart of gender vaccinated in MongoDB by country.
+- Last 5 vaccinated  people stored in Redis by country.
+- Bar Chart of vaccinated  age range in Redis by country.
 - Interactive realtime map to query this reports
 - Show in red color the most infected countries, yellow less infected, and green no infected country.
 
