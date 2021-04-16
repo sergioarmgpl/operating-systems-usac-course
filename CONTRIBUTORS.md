@@ -1,0 +1,2 @@
+# Contributors
+- Sergio Méndez, @sergioarmgpl
