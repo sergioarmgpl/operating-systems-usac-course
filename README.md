@@ -21,7 +21,7 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 # Table of Contents
 1. [ Syllabus ](lang/en/content/syllabus.md) 
 2. Contents
-3. Workshops
+3. [ Workshops & Videos ](workshops/README.md)
 4. Sample Codes
 5. [ Projects ](lang/en/projects/projects.md)
 6. [ Tutorials & Code Snippets ](resources/README.md)
