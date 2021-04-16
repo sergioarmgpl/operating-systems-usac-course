@@ -30,7 +30,7 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 
 # Contributions area
 - [Contribution Guide](CONTRIBUTING.md)
-- [ contributors ](contributors.md)
+- [ Contributors ](CONTRIBUTORS.md)
 
 # CONTACT
 To get in touch email us at:
