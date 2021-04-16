@@ -1,5 +1,4 @@
 # Locust guide
-
 Locust is an open source testing tool, after installation we can use it as normal Python module and import the code from other files or packages.
 
 

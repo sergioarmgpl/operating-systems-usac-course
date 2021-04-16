@@ -1,2 +1,0 @@
-# Locust guide
-

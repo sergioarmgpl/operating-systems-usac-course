@@ -24,7 +24,8 @@ There are different ways that the CNCF Communities and CNCF Projects can contrib
 3. Workshops
 4. Sample Codes
 5. [ Projects ](lang/en/projects/projects.md)
-6. Resources
+6. [ Tutorials & Code Snippets ](resources/README.md)
+
 7. Events
 
 # Contributions area
