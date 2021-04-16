@@ -1,6 +1,6 @@
 # Resources on this repo
 ## Testing
-- [ Locust ](tests/locust/HowToUseIt.md)
+- [ Locust ](tests/Locust/HowToUseIt.md)
 ## Languages
 Go
-- [ Introduction ](languages/intro/CONTENT.md)
+- [ Introduction ](languages/go/intro/CONTENT.md)
