@@ -8,7 +8,7 @@
 **Authors:** Sergio Méndez
 
 ## DESCRIPTION
-Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and service mesh such as Linkerd and some other Cloud Native technologies. In the last part we use a service mesh for traffic splitting an faulty traffic generation with Linkerd and Chaos for complementary tests. This project will be applied visualize Covid-19 Vaccinated people around the world.
+Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and service mesh such as Linkerd and some other Cloud Native technologies. In the last part we use a service mesh for traffic splitting an faulty traffic generation with Linkerd and Chaos Mesh to implement Chaos Engineering. This project will be applied visualize Covid-19 Vaccinated people around the world.
  
 ## OBJECTIVES
 - Understand concurrency and parallelism theory to develop distributed systems.
@@ -108,12 +108,15 @@ The goal is to compare the time response and performance for the different paths
 ### TRAFFIC SPLITTING
 To implement Traffic Splitting the project will use Linkerd to implement this feature with the idea that the traffic splits 33% traffic to the first path and the other 33% to the second path and so on. To implement this, Linkerd uses a Dummy service that can be the copy of the service of one of the paths, and it has to be used NGINX for this functionaly. Right now its the stable and tested option for this project.
 
-**Desired tests:**
+**Desired faulty traffic tests:**
 - Queue #1 50%, Queue #2 50%
 - Queue #1 33.33%, Queue #2 33.33%, Queue #3 33.33%
 - Queue #1 33.33%, Queue #2 33.33%, Faulty Traffic 33.33%
 - Queue #1 50%, Faulty Traffic 50%
 
+Take in consideration to answer the following questions:
+- How the golden metrics perform, how you can interpret these 4 faulty traffic tests using as base the graphs and metrics that Linkerd Grafana dashboard shows. 
+- Mention at least 3 behavior paterns that you discovered.
 
 ## THIRD PART (RPC, BROKERS AND NOSQL DATABASES)
 The main idea in this part is to create a high performance way to write data to NoSQL databases, using RPC communication versus Brokers. The goal is to compare the performace of the paths. The implementation consist in the first path will use Redis to receive data to be written to NOSQL Databases, and the other uses a high performance RPC, gRPC. Please refer to the architecture diagram.
@@ -123,7 +126,14 @@ The main idea in this part is to create a high performance way to write data to 
 **gRPC:** Is a high performance RPC framework that can run in any environment. Used primary to connect backend services.
 
 **Kafka:** Is a HA queue system mode for streaming data for realtime applications.
-  
+
+Take in consideration to answer the following questions:
+- Which queue systems is faster?
+- How many resources use each queue system?
+- Mention gods and bads of each queue system
+- Which one is better?
+
+
 ## FOURTH PART (NOSQL DATABASE)
 This project was based on a copy of structure of the Instagram Architecture, because of the nature of the system and the no scheme data, will be better to use NoSQL Databases. MongoDB could be used to store persistent data and Redis to implement counters and some caches to display data or analytics in realtime. Is decision of the student how to implement it.
   
@@ -133,16 +143,20 @@ This project was based on a copy of structure of the Instagram Architecture, bec
   
 This databases will be installed in a instance that have to be accesible in the VPC of the Kubernetes Cluster.
 
+Take in consideration to answer the next question:
+- Which database performs better and why?
+
 ## FIFTH PART (WEBSITE OR MAIN PAGE)
 In the last part you have to create a website to show in realtime the inserted data, using a main page(See architecture diagram) developed with NodeJS, React or other progressive Javascript framework. You could use websockets in NodeJS or other language to show date in realtime. This main page have to show the next data:
   
 **Data sections:**
 - Collections data stored in MongoDB.
-- Top 3 of vaccinated  countries in MongoDB.
+- Top 10 of vaccinated  countries in Redis.
+- Vaccinated people on each country with Redis
 - Pie Chart of gender vaccinated in MongoDB by country.
-- Last 5 vaccinated  people stored in Redis by country.
-- Bar Chart of vaccinated  age range in Redis by country.
-- Interactive realtime map to query this reports
+- Last 5 vaccinated  people stored in Mongo by country.
+- Bar Chart of vaccinated age range in Redis by country.
+- Interactive realtime map to query this reports.
 - Show in red color the most infected countries, yellow less infected, and green no infected country.
 
 ### MANAGED SERVICES
@@ -164,6 +178,20 @@ In this part the student has to implement faulty traffic to the system and kill 
 
 The goal is to monitor the behavior of the system while the Chaos is in progress.
 
+Prepare the next experiments:
+- Linkerd, faulty traffic acording to the traffic splitting section
+With Chaos mesh prepare the next experiments:
+- Pod kill
+- Pod failure
+- Container kill
+- Network Emulation (Netem) Chaos
+- DNS Chaos
+
+And answer the next question:
+- How each experiment reflect on the Linkerd Graph, What is happen?
+- How each experiment are different
+- Which experiment is the most harmful experiment
+
 **Note:** The war zone refers to a Chaos Engineering tests running.
 
 ## RESTRICTIONS
@@ -178,7 +206,7 @@ The goal is to monitor the behavior of the system while the Chaos is in progress
 - Manuals in PDF format
 
 ## Deadline
-Middle May 2021
+May 12, 2021
 
 ## Resources
 - Diagram on this project, https://app.diagrams.net/#G1iX9hdyBTAoBd47ZMtfEg8iSXXtkPriTv
@@ -198,3 +226,4 @@ You can contribute in several ways:
 - Share really awesome ideas
 - Provide real data to test in this infrastructure
 - Everything is welcome
+- Create or work on an issue on this repository
