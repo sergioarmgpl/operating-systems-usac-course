@@ -231,6 +231,7 @@ November 10, 2021
 - https://redis.io/
 - https://strimzi.io/
 - https://chaos-mesh.org/
+- https://www.rabbitmq.com/getstarted.html
 
 ## CONTRIBUTE
 You can contribute in several ways:
