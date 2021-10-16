@@ -8,7 +8,7 @@
 **Authors:** Sergio Méndez, Carlos Ramírez
 
 ## DESCRIPTION
-Build a generic distributed system architecture that shows statistics in realtime using Kubernetes and service mesh such as Linkerd and some other Cloud Native technologies. In the last part we use a service mesh for traffic splitting an faulty traffic generation with Linkerd and Chaos Mesh to implement Chaos Engineering. This project will be applied visualize Covid-19 Vaccinated people around the world.
+This is the First version of the USAC Squid Game, where the students create a distributed systems to generate random data for games, in this case will be based on the Netflix series Squid Game, this project uses Kubernetes, Redis, MongoDB, Linkerd and Chaos Mesh. We are testing, service meshes, traffic splitting, concurrency/parallelism and chaos engineering.
  
 ## OBJECTIVES
 - Understand concurrency and parallelism theory to develop distributed systems.
