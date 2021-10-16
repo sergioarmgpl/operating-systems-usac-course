@@ -169,6 +169,7 @@ In the last part you have to create a website to show in realtime the inserted d
 ### Frontend examples
 **Main Page**
 ![Architecture Diagram](main.png)
+  
 **Player Stats**
 ![Architecture Diagram](playerstats.png)
 
