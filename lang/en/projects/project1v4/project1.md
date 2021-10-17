@@ -34,9 +34,9 @@ For example a game will have the next rules:
 
 
 ## FIRST PART (Go Traffic generator)
-This part consist in the creation of a tool that generates traffic using Go, Goroutines and channels. This traffic will be received by the ingress controller published in a load balancer, it will be using cip.io site to generate a public URL, for example:
+This part consist in the creation of a tool that generates traffic using Go, Goroutines and channels. This traffic will be received by the ingress controller published in a load balancer, it will be using nip.io site to generate a public URL, for example:
 
-- 193.60.11.13.cip.io, this domain is exposed using an ingress controller and it's load balancer.
+- 193.60.11.13.nip.io, this domain is exposed using an ingress controller and it's load balancer.
 
 ### Go generator
 This application is written in Go, using Goroutines and channels. The syntaxis for this CLI will be:
