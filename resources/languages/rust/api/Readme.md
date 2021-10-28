@@ -1,5 +1,5 @@
 ### Start API REST whit RUST
-Initialice the project 
+Initialize the project 
 ``` CMD
 $ cargo init --bin api
 ```
