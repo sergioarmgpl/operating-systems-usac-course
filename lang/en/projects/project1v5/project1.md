@@ -62,7 +62,7 @@ In this part and API created with Go, receives the requests and the, insert this
 ## steps 5-6 (gRPC + Redis)
 When second, receives the information its transformed to the Protobuf format that will be read it by the gRPC server listening in the other cluster, for this, its necessary a service mirror using the Linkerd multicluster feature, that mirrors the server in the order cluster in order to call the service in the other cluster as if this exists in the same cluster. Finally this server receives the information and install and store the information in Redis, using Hashes and Sets for the /live data page.
 
-## steps 7-9
+## steps 7-9 (Cloud Run)
 In this part there is a Frontend application which consists in 2 pages:
 - /live, that shows the predictions by the fans
 ![Live data using Redis](live.png)
@@ -71,10 +71,10 @@ In this part there is a Frontend application which consists in 2 pages:
   
 This application programmed in React is deployed using Google Cloud Run, and calls another API programmed in Go in the Azure cluster. This API reads directly the information from Redis Cache and CosmosDB using MongoDB.
 
-## Step 10
+## Step 10 (Chaos Mesh)
 This consists un running chaos engineering tests using Chaos Mesh, in this case, it has to be destroyed the application that returns the data for the /live realtime page, and optionally for the API that receives the data before insert then into the Kafka topic.
 
-## Step 11
+## Step 11 (Linkerd)
 This part consists in observe the the API that inserts the data into the Kafka topic, and observe the Go API that reads data for the pages. For this is used Linkerd service mesh, to show some realtime information.
 
 ## CONSIDERATIONS
