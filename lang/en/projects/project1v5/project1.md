@@ -71,7 +71,10 @@ In this part there is a Frontend application which consists in 2 pages:
   
 This application programmed in React is deployed using Google Cloud Run, and calls another API programmed in Go in the Azure cluster. This API reads directly the information from Redis Cache and CosmosDB using MongoDB.
 
-## Steps 10-11
+## Step 10
+This consists un running chaos engineering tests using Chaos Mesh, in this case, it has to be destroyed the application that returns the data for the /live realtime page, and optionally for the API that receives the data before insert then into the Kafka topic.
+
+## Step 11
 This part consists in observe the the API that inserts the data into the Kafka topic, and observe the Go API that reads data for the pages. For this is used Linkerd service mesh, to show some realtime information.
 
 ## CONSIDERATIONS
