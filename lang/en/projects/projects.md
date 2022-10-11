@@ -1,5 +1,8 @@
 # Projects
 Here you can find ideas of projects to use with your students
+
+## Usactar 2022/Oct-Nov [view](project1v5/project1.md)
+This is project consists in show realtime people predictions about soccer matches, for this we are using Kafka Topics, Kubernetes, Linkerd to interconnect a Google and an Azure cluster, and some Google service to show data in realtime. This technologies are used to create our distributed system, and tested using Chaos Mesh.
 ## USAC Squid Game 2021/Oct-Nov [view](project1v4/project1.md)
 This is the First version of the USAC Squid Game, where the students create a distributed systems to generate random data for games, in this case will be based on the Netflix series Squid Game, this project uses Kubernetes, Redis, MongoDB, Linkerd and Chaos Mesh. We are testing, service meshes, traffic splitting, concurrency/parallelism and chaos engineering.
 
