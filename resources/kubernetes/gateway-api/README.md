@@ -15,11 +15,13 @@ kubectl expose pod mipod2 --port=80 --name=mipod2-svc
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v0.8.1/standard-install.yaml
 ```
 4. Install NGINX Gateway
+```
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v0.8.1/standard-install.yaml
 kubectl apply -f https://github.com/nginxinc/nginx-gateway-fabric/releases/download/v1.0.0/crds.yaml
 kubectl apply -f https://github.com/nginxinc/nginx-gateway-fabric/releases/download/v1.0.0/nginx-gateway.yaml
 kubectl get pods -n nginx-gateway
 kubectl apply -f https://raw.githubusercontent.com/nginxinc/nginx-gateway-fabric/v1.0.0/deploy/manifests/service/loadbalancer.yaml
+```
 5. Get the public API Assigned to the gateway
 ```
 kubectl get svc -n nginx-gateway
