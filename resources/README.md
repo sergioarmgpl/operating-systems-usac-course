@@ -11,5 +11,5 @@ Python
 gRPC
 - [ Introduction ](cloudnative/gRPC-go/README.md)
 ## Kubernetes
-Pending
+- [ Gateway API ](kubernetes/gateway-api/README.md)
 
