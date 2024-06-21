@@ -107,7 +107,7 @@ Take in consideration to answer the following questions:
 - The project have to by developed in duos
 - Have to be implemented with the ingresses and languages selected
 - Write an tecnical and user manual
-- If copies found, the trio will receive a score of 0 points and will be reported.
+- If copies found, the duo will receive a score of 0 points and will be reported.
 - Late projects will be not accepted
  
 ## ARTIFACTS TO DELIVER
