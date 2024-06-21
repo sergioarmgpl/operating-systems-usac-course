@@ -128,7 +128,7 @@ Jun 28th, 2024
 - gRPC Intro: https://www.youtube.com/watch?v=ftefBd0t61w
 - Confluent Kafka Libraries: https://github.com/confluentinc/confluent-kafka-go
 - Kepler: https://sustainable-computing.io/
-- Code that you can use: [view](project1v6/yaml)
+- Code that you can use: [view](yaml)
 
 
 ## CONTRIBUTE
