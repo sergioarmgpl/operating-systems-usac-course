@@ -110,10 +110,48 @@ spec:
         from: Same
 ---
 apiVersion: gateway.networking.k8s.io/v1beta1
+kind: Gateway
+metadata:
+  name: prod-web-tls
+spec:
+  gatewayClassName: nginx
+  listeners:
+  - protocol: HTTPS
+    port: 443
+    tls:
+      mode: Terminate # If protocol is `TLS`, `Passthrough` is a possible mode
+      certificateRefs:
+      - kind: Secret
+        group: ""
+        name: default-cert
+    name: prod-web-tls-gw
+    allowedRoutes:
+      namespaces:
+        from: Same
+---
+apiVersion: gateway.networking.k8s.io/v1beta1
 kind: HTTPRoute
 metadata:
-  name: simple-split
+  name: mipod1-svc
 spec:
+  parentRefs:
+  - name: prod-web
+  rules:
+  - backendRefs:
+    - name: mipod1-svc
+      port: 80
+      weight: 90
+    - name: mipod2-svc
+      port: 80
+      weight: 10
+---
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: HTTPRoute
+metadata:
+  name: mipod1-tls-svc
+spec:
+  parentRefs:
+  - name: prod-web-tls
   rules:
   - backendRefs:
     - name: mipod1-svc
@@ -123,6 +161,7 @@ spec:
       port: 80
       weight: 10
 EOF
+---
 ```
 
 # References

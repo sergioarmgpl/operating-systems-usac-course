@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: api
+  name: api
+  namespace: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: api
+    spec:
+      containers:
+      - image: sergioarmgpl/api-redis-proj
+        name: api-redis-proj
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: api
+  name: api
+  namespace: project
+spec:
+  ports:
+  - port: 1234
+    protocol: TCP
+    targetPort: 1234
+  selector:
+    app: api
+  type: ClusterIP
+status:
+  loadBalancer: {}

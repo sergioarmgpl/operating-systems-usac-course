@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: redis
+  name: redis
+  namespace: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: redis
+  template:
+    metadata:
+      labels:
+        run: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:6.2
+        ports:
+        - containerPort: 6379
+        resources:
+          limits:
+            cpu: "0.2"
+            memory: "128Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: redis
+  name: redis
+  namespace: project
+spec:
+  ports:
+  - port: 6379
+    protocol: TCP
+    targetPort: 6379
+  selector:
+    run: redis
+  type: ClusterIP

@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-configmap
+  namespace: project
+data:
+  mongod-conf: |
+    dbpath=/var/lib/mongodb
+    logpath=/var/log/mongodb/mongodb.log
+    logappend=true
+    bind_ip = 0.0.0.0
+    port = 27017
+    journal=true
+    auth = true
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mongo
+  name: mongo
+  namespace: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo
+  template:
+    metadata:
+      labels:
+        app: mongo
+    spec:
+      containers:
+      - image: mongo:4.4
+        name: mongo
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: "admin"
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          value: "YOUR_PASSWORD"
+        - name: MONGO_INITDB_DATABASE
+          value: "mydatabase"
+        ports:
+        - containerPort: 27017
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "200Mi"
+        volumeMounts:
+        - mountPath: /mongoconf
+          name: config
+      volumes:
+        - name: config
+          configMap:
+            name: mongo-configmap
+            items:
+            - key: mongod-conf
+              path: mongod.conf
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: mongo
+  name: mongo
+  namespace: project
+spec:
+  ports:
+  - port: 27017
+    protocol: TCP
+    targetPort: 27017
+  selector:
+    app: mongo
+  type: ClusterIP

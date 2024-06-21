@@ -1,5 +1,7 @@
 # Projects
 Here you can find ideas of projects to use with your students
+## Weather Tweets 2024/Jun [view](project1v6/project1.md)
+This is project consists in show realtime system that shows Weather messages using Grafana, for this we are using Kafka Topics, Redis, Mongo and Kubernetes. Also we included Kepler to add a part of environmental sustainability feature to measure the power and carbon emissions for the infrastructure..
 
 ## Usactar 2022/Oct-Nov [view](project1v5/project1.md)
 This is project consists in show realtime people predictions about soccer matches, for this we are using Kafka Topics, Kubernetes, Linkerd to interconnect a Google and an Azure cluster, and some Google service to show data in realtime. This technologies are used to create our distributed system, and tested using Chaos Mesh.
